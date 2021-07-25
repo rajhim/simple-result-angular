@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="row">
+    <div class="col-sm-12 text-center" *ngFor="let data of results;">
+      <div class="col-sm-12">  {{data.date}}</div>
+      <div class="card-body row text-center" (click)="viewEdit(sub.id)" *ngFor="let sub of data?.games">
+
+        <div class="col-sm-6">
+          <h3>Home</h3>
+          <div [class]="sub | matchHighLightPipe: 'homeScore'"> {{sub?.homeTeam}} ({{sub?.homeScore}})</div>
+        </div>
+<!--        <div>VS</div>-->
+        <div class="col-sm-6">
+          <h3>Away</h3>
+          <div [class]="sub | matchHighLightPipe: 'awayScore'">{{sub?.awayTeam}} ({{sub?.awayScore}})</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

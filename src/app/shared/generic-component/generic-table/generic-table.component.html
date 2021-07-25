@@ -1,0 +1,14 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th *ngFor="let header of headers">{{ header }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of dataList">
+      <td *ngFor="let value of item | objectValuesPipe">
+        {{ value }}
+      </td>
+    </tr>
+  </tbody>
+</table>
