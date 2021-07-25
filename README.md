@@ -1,10 +1,16 @@
 # ItonicTest
+## About
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
+Simple League App. You can enter Home & Away team name with score on specific date. These data will calculate and show played match, win, draw, loss and points 
+
+## Demo Url
+
+The app is deployed in Heroku. Navigate to this [live preview](https://angular-leauge-app.herokuapp.com/) link.
+
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve -o --port 1300` for a dev server. Navigate to `http://localhost:1300/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 

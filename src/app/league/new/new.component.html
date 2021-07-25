@@ -1,57 +1,53 @@
-<div >
-  <div class="card">
-    <div class="card-header">
-      Add new result
-    </div>
-    <div class="card-body">
-      <form #f="ngForm">
-        <div class="row">
-          <div class="col-sm-12  ">
-            <div class="col-sm-6">
-              <div class="label">Date</div>
-              <input type="date"  class="form-control" required [(ngModel)]="team.date" name="date">
-            </div>
-          </div>
-          <br>
-          <hr>
-          <div class="col-sm-6">
-            <h4>Team 1</h4>
-            <hr>
-            <div class="col-sm-12">
-              <div class="label">Team</div>
-              <input class="form-control" required [(ngModel)]="team.homeTeam" name="team1">
-            </div>
-            <div class="col-sm-12">
-              <div class="label">Score</div>
-              <input class="form-control"
-                     numbersOnly required
-                     [(ngModel)]="team.homeScore" name="score1">
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <h4>Team 2</h4>
-            <hr>
-            <div class="col-sm-12">
-              <div class="label">Team</div>
-              <input class="form-control"  required [(ngModel)]="team.awayTeam" name="team2">
-            </div>
-            <div class="col-sm-12">
-              <div class="label">Score</div>
-              <input class="form-control"
-                     numbersOnly required
-                     [(ngModel)]="team.awayScore" name="score2">
-            </div>
-          </div>
+<div>
+    <div class="card">
+        <div class="card-header">
+            Add new result
+        </div>
+        <div class="card-body">
+            <form #f="ngForm">
+                <div class="row">
+                    <div class="col-sm-12  ">
+                        <div class="col-sm-6">
+                            <div class="label">Date</div>
+                            <input type="date" class="form-control" required [(ngModel)]="team.date" name="date">
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    <hr>
+                    <div class="col-sm-6">
+                        <h4>Home</h4>
+                        <hr>
+                        <div class="col-sm-12">
+                            <div class="label">Team</div>
+                            <input class="form-control" required [(ngModel)]="team.homeTeam" name="team1">
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="label">Score</div>
+                            <input class="form-control" numbersOnly required [(ngModel)]="team.homeScore" name="score1">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <h4>Away</h4>
+                        <hr>
+                        <div class="col-sm-12">
+                            <div class="label">Team</div>
+                            <input class="form-control" required [(ngModel)]="team.awayTeam" name="team2">
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="label">Score</div>
+                            <input class="form-control" numbersOnly required [(ngModel)]="team.awayScore" name="score2">
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+        <div class="card-footer text-right">
+            <button *ngIf="!routeId" (click)="submitData()" class="btn btn-primary">Submit</button>
+            <button *ngIf="routeId" (click)="submitData()" class="btn btn-primary">Update</button>
         </div>
 
-
-      </form>
     </div>
-    <div class="card-footer text-right">
-      <button *ngIf="!routeId" (click)="submitData()" class="btn btn-primary">Submit</button>
-      <button *ngIf="routeId" (click)="submitData()" class="btn btn-primary">Update</button>
-    </div>
-
-  </div>
 </div>
-

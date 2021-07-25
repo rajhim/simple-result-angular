@@ -1,7 +1,36 @@
 .won-color {
-  color: greenyellow;
+    color: #568f00;
 }
 
 .loss-color {
-  color: red;
+    color: red;
+}
+
+.date {
+    font-weight: 500;
+    padding: 8px;
+}
+
+.box {
+    border: 1px solid rgb(202, 194, 194, 0.5);
+    border-radius: 8px;
+}
+
+.card-body {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    text-align: center;
+    transition: margin-left 0.3s linear, font-weight 0.2s linear, color 0.3s linear;
+    -webkit-transition: margin-left 0.3s linear, font-weight 0.2s linear, color 0.3s linear;
+    -moz-transition: margin-left 0.3s linear, font-weight 0.2s linear, color 0.3s linear;
+    -o-transition: margin-left 0.3s linear, font-weight 0.2s linear, color 0.3s linear;
+    -ms-transition: margin-left 0.3s linear, font-weight 0.2s linear, color 0.3s linear;
+}
+
+.card-body:hover {
+    cursor: pointer;
+    font-weight: 600;
+    color: #add8e6;
+    padding-left: 8px;
 }

@@ -1,21 +1,16 @@
 <table class="table table-hover" [ngClass]="defaultClass">
-  <thead>
-  <tr >
-    <th  *ngFor="let header of headers"
-         [sort]="dataList"
-         [colValue]="header.colValue"
-         [style.width]="header?.width"
-         [sortBoolean]="showSorting"
-    >
-      {{ header.title }}
-    </th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let item of dataList; let i = index; " [ngClass]="i | rowColorsPipe" >
-    <td *ngFor="let value of item | objectValuePipe" >
-      {{ value }}
-    </td>
-  </tr>
-  </tbody>
+    <thead>
+        <tr>
+            <th *ngFor="let header of headers" [sort]="dataList" [colValue]="header.colValue" [style.width]="header?.width" [sortBoolean]="showSorting">
+                {{ header.title }}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of dataList; let i = index; " [ngClass]="i | rowColorsPipe">
+            <td *ngFor="let value of item | objectValuePipe">
+                {{ value }}
+            </td>
+        </tr>
+    </tbody>
 </table>

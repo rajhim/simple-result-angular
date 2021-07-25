@@ -30,7 +30,12 @@ export class ResultComponent implements OnInit{
           games: groups[date]
         };
       });
-      this.results = groupArrays;
+      var sortArray = groupArrays.sort(function(a, b) {
+        var c = new Date(a.date);
+        var d = new Date(b.date);
+        return (d as any)-(c as any);
+      });
+      this.results = sortArray;
     })
   }
 
